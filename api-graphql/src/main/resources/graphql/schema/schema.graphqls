@@ -1,0 +1,8 @@
+# scalar UmcCanonicalId
+# scalar UmcReferenceId
+
+type Query {
+}
+
+type Mutation {
+}

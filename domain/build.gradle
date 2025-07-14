@@ -1,0 +1,11 @@
+apply from: "${rootProject.rootDir}/gradle/graphql.gradle"
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+}
+
+generateJava {
+    schemaPaths = ["${projectDir}/src/main/resources/graphql"]
+    packageName = 'ru.mts.media.platform.umc.domain.gql'
+    generateClient = false
+}

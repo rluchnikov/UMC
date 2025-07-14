@@ -1,0 +1,6 @@
+rootProject.name = 'umc'
+
+include 'application'
+include 'domain'
+include 'api-graphql'
+include 'dao-postgres'

@@ -1,0 +1,5 @@
+server.port: 20101
+
+logging.level:
+  root: INFO
+  com.netflix: DEBUG

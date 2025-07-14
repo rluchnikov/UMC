@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-gradle:${netflixDgsCodeGenVersion}"
+    }
+}
+
+apply plugin: 'com.netflix.dgs.codegen'
+
+dependencyManagement {
+    imports {
+        // We need to define the DGS BOM as follows such that the
+        // io.spring.dependency-management plugin respects the versions expressed in the DGS BOM, e.g. graphql-java
+        mavenBom "com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:${netflixDgsVersion}"
+    }
+}
+
+dependencies {
+    //DGS BOM/platform dependency. This is the only place you set version of DGS
+    implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:${netflixDgsVersion}"))
+
+    implementation 'com.netflix.graphql.dgs:dgs-starter'
+    // implementation 'com.netflix.graphql.dgs:graphql-dgs-federation'
+}

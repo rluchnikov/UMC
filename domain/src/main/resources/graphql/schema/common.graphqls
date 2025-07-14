@@ -1,0 +1,11 @@
+type FullExternalId {
+    providerId: ID!
+    brandId: ID!
+    externalId: ID!
+}
+
+input FullExternalIdInput {
+    providerId: ID!
+    brandId: ID!
+    externalId: ID!
+}

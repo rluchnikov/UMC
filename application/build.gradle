@@ -1,0 +1,8 @@
+dependencies {
+    implementation project(':domain')
+    implementation project(':api-graphql')
+    implementation project(':dao-postgres')
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+}
