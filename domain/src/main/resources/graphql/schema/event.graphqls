@@ -1,0 +1,20 @@
+type Event {
+    id: ID!
+    venues: [Venue!]!
+    name: String
+    startTime: LocalDateTime
+    endTime: LocalDateTime
+}
+
+input SaveEventInput {
+    venueReferenceIds: [String!]!
+    name: String
+    startTime: LocalDateTime
+    endTime: LocalDateTime
+
+}
+
+input EventFilterInput {
+    fromStartTime: LocalDate
+    toEndTime: LocalDate
+}

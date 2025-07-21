@@ -9,3 +9,4 @@ CREATE TABLE venue
 );
 
 CREATE UNIQUE INDEX idx_venue_reference_id ON venue(reference_id);
+
